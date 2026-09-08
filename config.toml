@@ -1,0 +1,29 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Hugo Minima"
+
+paginate = 10 
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"
+
+[params]
+  description = "A Hugo theme based on the Jeckyll Minima template."
+  author = "Your Name"
+  intro = "Hey ! This is a block intro, put some markdown on it :  [contact me](/contact/)!"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\[', '\]']]
+          inline = [['$', '$'], ['\(', '\)']]
+
+[menu]
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 1
